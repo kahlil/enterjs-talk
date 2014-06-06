@@ -55,7 +55,19 @@ FEOPS Engineers müssen sich um das Einrichten von Grunt Befehlen kümmern.
 * JavaScript Module bauen (Require.js / Browserify)
 * minifizieren
 * konkatinieren
-* 
+* CSS generieren
+* Bilder optimieren
+* SVGs optimieren
+* Sprites erstellen
+* Request reduzieren wo es geht und Sinn macht
+
+
+### Glückliche Entwickler
+
+* FEOPS Engineers stellen sicher, dass **alle Build Vorgänge auf den Maschinen der Entwickler funktionieren**
+* `grunt test` sollte alles lokal bauen, ausliefern und testen können (mit Webdriver API Server)
+* ermöglichen den Entwicklern die Applikation in die CI Umgebung auszuliefern und dort zu testen
+* entfernen Single-Points-Of-Failure vom Deployment (Github-Ausfall würde sie nicht beunruhigen)
 
 ## Teil II: JavaScript Build Tools - Überblick über GruntJS
 
