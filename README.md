@@ -45,11 +45,22 @@ Frontend Ops Engineer müssen
 
 * die Build-Tool-Chain in- und auswändig kennen
 * die Test-Instanzen auf denen ihre Applikation läuft auf dem CI Server aufsetzen und dann später auch die Deployment-Instanzen
-* Git Post-Commit-Hooks in die Applikation integrieren und die Test laufen lassen
+* Git Post-Commit-Hooks in die Applikation integrieren und die Test laufen lassen (Node.js/Protractor/PhantomJS oder gegen ein Selenium Grid wie Saucelab oder Testling oder BrowserStack) bevor irgendwas nach `master`gemerged wird
+* sicherstellen, dass diese Server den rohen Code nehmen können und mit ein paar wenigen Kommandos die Applikation bauen können.
 
+Für viele Aufgaben die für den Frontend Operations Engineer anfallen wird oft GruntJS verwendet. Mit einem `grunt build` kann ein korrekt eingerichteter Server eine gebaute Version der Applikation bereitstellen um dann die Teste dagegen zu fahren.
+
+FEOPS Engineers müssen sich um das Einrichten von Grunt Befehlen kümmern.
+
+* JavaScript Module bauen (Require.js / Browserify)
+* minifizieren
+* konkatinieren
+* 
 
 ## Teil II: JavaScript Build Tools - Überblick über GruntJS
 
 ## Teil III: Frontend Ops mit GruntJS
+
+
 
 ## Outro
