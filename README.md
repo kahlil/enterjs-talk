@@ -68,6 +68,28 @@ FEOPS Engineers müssen sich um das Einrichten von Grunt Befehlen kümmern.
 * `grunt test` sollte alles lokal bauen, ausliefern und testen können (mit Webdriver API Server)
 * ermöglichen den Entwicklern die Applikation in die CI Umgebung auszuliefern und dort zu testen
 * entfernen Single-Points-Of-Failure vom Deployment (Github-Ausfall würde sie nicht beunruhigen)
+- ermöglichen interne Deployments von Feature Branches und zukünftigen Release Branches
+- stellen sicher, dass QA Teams die Seite einfach Testen können und Manager sehr einfach Demos von unfertigen Features zeigen können
+- helfen dabei, verschiedene Builds der Applikation für die Kernbenutzer der Applikation zu schaffen, wenn nötig. Muss für die Entwickler transparent bleiben
+- ermöglichen und vereinfachen den Prozess eine Applikation zu builden, Assets an die CDNs auzulieferen und die Livestellung des ganzen
+- implementiert schnelle Rollbacks
+- **automatisiert alles**
+
+### Leistungsmessung
+
+- die Leistung des Frontend Ops Engineers wird an Geschwindigkeit gemessen. Die Geschwindigkeit
+  - der Applikation
+  - der Tests
+  - der Builds
+  - des Deployments
+und die Geschwindkeit mit der Teammitglieder den Operationsprozess verstehen.
+
+#### Dashboard
+
+FEOPSE verbringend die meiste Zeit in einem Dashboard dass sie ständig mit Daten füttert. Daten sind König wenn es um Geschwindigkeit geht. Das Dashboard lädt die Applikation ständig in verschiedenen Browsern und misst ständig die Performance der Seite.
+
+Das Dasboard lädt auch die neuesten PRs und Commits, einfach alles an das FEOPSE rankommen
+
 
 ## Teil II: JavaScript Build Tools - Überblick über GruntJS
 
