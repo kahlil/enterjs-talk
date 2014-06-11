@@ -88,7 +88,16 @@ und die Geschwindkeit mit der Teammitglieder den Operationsprozess verstehen.
 
 FEOPSE verbringend die meiste Zeit in einem Dashboard dass sie ständig mit Daten füttert. Daten sind König wenn es um Geschwindigkeit geht. Das Dashboard lädt die Applikation ständig in verschiedenen Browsern und misst ständig die Performance der Seite.
 
-Das Dasboard lädt auch die neuesten PRs und Commits, einfach alles an das FEOPSE rankommen
+* Das Dasboard lädt auch die neuesten PRs und Commits, einfach alles an was FEOPSE rankommen.
+* Kennt alle Umstände eines Performance-Verlust.
+* Performance-Verlust hängt direkt mit einer Änderung zusammen.
+  * Neuer Server?
+  * Code-Diff?
+  * Neue Abhängigkeit?
+  * Ein Ausfall?
+  * etc.
+
+
 
 
 ## Teil II: JavaScript Build Tools - Überblick über GruntJS
