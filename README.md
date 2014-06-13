@@ -97,6 +97,31 @@ FEOPSE verbringend die meiste Zeit in einem Dashboard dass sie ständig mit Date
   * Ein Ausfall?
   * etc.
 
+**Graphen**
+* zu HTTP Load
+* CSS, JS Load minified & gzipped
+* ungzipped JS Load um den Effekt von Code Parsing auf Mobile zu messen
+* benutzt Tools wie mod_pagespeed und nginx_pagespeed um Fehler zu vermeiden
+* Meister der Dev- und Messtools
+* flame graphs, Heap Snapshots
+* fps Messung
+* layout thrashing vermeiden
+* baut Hauptspeicherprofile
+* Auge auf: Compositing, Rendering und die generelle visuelle Performance der Applikation
+* Alles für Desktop und Mobile sowie das Tracken von Trends in diesen Gebieten
+
+**Paralellisieren**
+* alles wird fanatisch parallelisiert
+* Tracking via .har-Dateien und Wasserfallgraphen
+* durschnittl. Laufzeit der Tests, Build & Deploys messen und kämpfen um diese niedrig zu halten
+* Auch wenn keine Kontrolle über langsame API Requests besteht, ist es wichtig zu wissen, das die Quelle des Geschwindigkeitverlusts ist
+* Alarme werden ausgelöst wenn akzeptable Limits überschritten werdeh
+
+
+### Error-Monitoring und Logs
+* in der FE Ops Welt ist das in der Regel eine Analytics Tool
+
+
 
 
 
