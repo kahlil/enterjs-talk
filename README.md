@@ -120,6 +120,16 @@ FEOPSE verbringend die meiste Zeit in einem Dashboard dass sie ständig mit Date
 
 ### Error-Monitoring und Logs
 * in der FE Ops Welt ist das in der Regel eine Analytics Tool
+* niedrige Fehlertoleranz intern
+* konstante Prüfung auf XSS-Schwachstellen
+* hat eine konstanten Überblick über den Zustand der Applikation in Produktion
+
+### Alles frisch und stabil halten
+* FEOPS würden alle Dependencies Up-To-Date halten (jQuery, Grunt, Node etc.)
+* enge Zusammenarbeit mit Applikations-Architekten um sicher zu stellen, dass die Applikation an keiner Stelle nachhängt oder unstabil ist
+* stellt sicher dass es auch lange nach Launch der Applikation die Arbeit an der Applikation Spaß macht
+*
+
 
 
 
