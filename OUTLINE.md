@@ -7,20 +7,41 @@
 ## Intro
 ## Teil I: Frontend Ops - Überblick
 
+
+
 ### Was ist ein Frontend Ops Engineer?
 Wer von euch kann sich unter dem Begriff schon was vorstellen?
 
-* Referenzartikel von Alex Sexton, sicher kann man sich um Details streiten der Artikel ist meines Erachtens aber sehr erschöpfend
-* Auf einzelne Aufgaben gehe ich beispielhaft im Detail noch ein aber meiner Meinung nach kann man diese Disziplin schön auf 3 Hauptziele/Hauptmesswerte und zwei Werkzeugklassen reduzieren um die Disziplin zusammen zu fassen
+#### Geschichte
+* 26.03.2013: Artikel von Alex Sexton: "[Deploying JavaScript Applications](https://alexsexton.com/blog/2013/03/deploying-javascript-applications)"
+* 30.03.2013: Kommentar auf den oben genannten Artikel
 
-**Ziele:**
-* Geschwindigkeit für alle Abläufe
+> With all due respect, may I ask if you actually enjoy your job? I am dev, and I do enjoy using tech to do stuff - to a point. If your role is to squeeze every last second of performance out of your app, then yea, all this stuff must be cool. BUT if you are a coder doing something else and *then* come back to all of *this* as well, then wow, I don't know how you haven't gone mad already.
+>
+> I'd be sick to the stomach if I had to do all of this, in addition to my usual work."
+
+* Führte zu einem Artikel am 11.06.2013: "[Front End Ops](http://www.smashingmagazine.com/2013/06/11/front-end-ops/)" auf Smashingmagazine
+
+Alex Sexton:
+> What I didn’t fully grasp was how different the role in that article is from the picture that people have of a front-end developer in their head. Up to this point, a front-end developer had just the few operations duties lumped into their role, and even then, many people chose to skip those steps (that’s why Steve Souders is constantly yelling at you to make your pages faster).
+>
+> I think things are about to shift, and I’d (humbly) like to help guide that shift, because I think it’ll be great for the Web.
+ 
+* Referenzartikel von Alex Sexton, sicher kann man sich um Details streiten der Artikel ist meines Erachtens aber sehr gut, ausführlich und erschöpfend
+
+
+#### 3 Wesentliche Punkte
+
+Auf einzelne Aufgaben gehe ich beispielhaft im Detail noch ein aber meiner Meinung nach kann man diese Disziplin in drei Hauptpunkte zusammenfassen.
+
+
+* **Geschwindigkeit für alle Abläufe**
 	* Nicht nur die generelle Geschwindigkeit der Webseite oder Applikation, sondern
 		* Entwicklungsgeschwindigkeit
 		* Geschwindigkeit nach Local, Dev, Stage (, QA?), Prod
 		* Geschwindigkeit von Teilfunktionalität nach Dev (, Stage?)
 		* Geschwindigkeit von Stage nach Prod
-* Glückliche Menschen
+* **Glückliche Menschen**
 	Glückliche Menschen kommunizieren besser, erzeugen kurz- und langfristig weit besseren Code und somit ein besseres Produkt mit weniger Fehlern oder zumindest leichter behebbare Fehler.
 	* Glückliche Entwickler durch
 		* gute Code-Strukturierung durch Modularisierung und Konventionen
@@ -38,6 +59,11 @@ Wer von euch kann sich unter dem Begriff schon was vorstellen?
 		* Teilstände gehen schnell live
 		* Komplette Seite geht schnell live
 		* Seite performt wie erwartet
+* **Messen, messen, messen**
+	* Performance der App in versch. Szenarios
+	* Performance der Build Prozesse
+	* Performance der Deploymentprozesse
+	* Monitoring, Alarme
 
 **Werkzeugklassen:**
 * Automatisierungswerkzeuge
