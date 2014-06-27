@@ -99,4 +99,15 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
       display: inline;
     }
   }
+
+  pre, code {
+    background-color: darken(#bcbcbc, 45%);
+    color: lighten(#bcbcbc, 10%);
+  }
+  pre {
+    padding: 7px 10px;
+  }
+  code {
+    padding: .1em .3em;
+  }
 }

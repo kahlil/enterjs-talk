@@ -299,34 +299,122 @@ npm install grunt-contrib-uglify --save-dev
 <section data-background="/img/usage-example.png"></section>
 
 
+<section data-markdown data-background="/img/anatomy.gif" class="text-shadow">
+## Anatomie einer Task Konfiguration
+</section>
+
 <section data-markdown>
-# Konfiguration
+## Boilerplate
 ```
 grunt.initConfig({
-	concat: {
-		options: {
-			separator: ';',
-		},
-		dist: {
-			src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
-			dest: 'dist/built.js',
-		}
-  }
+	// ...
 });
 ```
 </section>
 
+<section data-markdown>
+## Taskname
+```
+grunt.initConfig({
+	concat: {
+		// ...
+	}
+});
+```
+
+Note:
+Der Taskname wird durch das Plugin vorgegeben.
+</section>
+
+<section data-markdown>
+## Optionen
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		}
+		// ...
+	}
+});
+```
+
+Note:
+Der Taskname wird durch das Plugin vorgegeben.
+</section>
+
+<section data-markdown>
+## Konfigruationsname
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		},
+		dist: {
+			// ...
+		}
+	}
+});
+```
+
+Note:
+Dieser Name kann frei gewählt werden.
+</section>
+
+<section data-markdown>
+## Input
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		},
+		dist: {
+			// Evtl. eine konfirgurationsspezifische options-Property
+			src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
+			// ...
+		}
+
+	}
+});
+```
+</section>
+
+<section data-markdown>
+## Output
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		},
+		dist: {
+			// Evtl. eine konfirgurationsspezifische options-Property
+			src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
+			dest: 'dist/built.js'
+		}
+
+	}
+});
+```
+</section>
 
 <section data-background="/img/concat.gif" data-background-size="802px">
 </section>
 
 
 
-<section data-markdown>
+<section data-markdown
+				 data-background="/img/power.gif" class="text-shadow">
 
-# Frontend Ops mit Grunt
+# Frontend Operations mit Grunt
 
 Note:
+
+Grunt kann vor allem dazu eingesetzt werden den Entwicklungsfluss zu beschleunigen, Code Qualität zu garantieren und Deployments zu vereinfachen.
+
+Ich stelle euch jetzt mal vor wie so ein optimierter Entwcklungsfluss aussehen kann und hoffe dass mindestens ein paar Punkte mitnehmt, die ihr heute direkt anwenden könnt.
 
 Frontend Operations ist das perfekte Thema um die Bandbreite an Möglichkeiten zu zeigen
 
@@ -343,90 +431,109 @@ Ich gebe euch hier nun einen Rundumschlag über die vielen Möglichkeiten die ih
 
 </section>
 
+<section data-markdown data-background="">
+	`> grunt`
 
-<section data-markdown data-background="/img/power.gif" class="text-shadow">
+	Note:
 
-Note:
-
-Wenn man das erste mal Grunt einsetzt fühlt sich das so an.
-
+	Ihr setzt euch an euren Arbeitsplatz. Terminal auf, wechselt in euer Directory und gebt `grunt` ein.
 </section>
 
-
-<section data-markdown data-background="">
-## Was kann ich mit Grunt abdecken?
-</section>
-
-<section data-markdown data-background="">
-## Frontend Assets optimieren
-</section>
-
-<section data-markdown data-background="">
+<section data-markdown class="text-shadow">
 
 ![](/img/concat-compress.png)
+
+Note:
+Als erstes starten die Präprozessoren.
+HTML Snippets oder JADE Templates werden zu HTML-Seiten kompiliert.
+Sass wird zu CSS kompiliert und
+JavaScript Module werden zu einer Datei zusammengefasst.
+Bilder werden einmal optimiert.
+
+grunt-contrib-sass oder *-less
+grunt-contrib-jade
+grunt-contrib-imagemin
+grunt-contrib-handlebars
 </section>
 
-<section>
-<video src="/video/imagemin.mov" controls></video>
+
+<section data-markdown>
+![](/img/livereload.gif)
+
+
+Note:
+Die kompilierten Dateien landen dann in einem Distributionsordner aus dem die optimierten Assets an den Entwicklungsserver ausgeliefert werden
+Als nächstes startet Grunt mit
+grunt-contrib-connect mit grunt-contrib-livereload
+einen Developmentserver der geänderte Dateien selbständig neu lädt.
+
+d.h. wenn man Änderungen vornimmt, die Dateien neu kompiliert werden und dann im Distributionsordner landen wird das von Livereload erkannt und die geänderten Assets werden automatisch neu geladen.
 </section>
 
-<section data-markdown data-background="">
-## Code Qualität
+<section data-markdown data-background="/img/watch.png" class="text-shadow">
+## grunt-contrib-watch
 </section>
 
 <section data-markdown>
-	grunt-contrib-jshint
 
-	grunt-jscs-checker
+# JSHINT & JSCS
 
-	grunt-githooks
+Note:
+
+Im JavaScript schalten sich, über den Watch-Task konfiguriert, ein JSHint-Checker und ein JS Style Checker dazwischen um sicher zu gehen, dass keine groben JavaScriptfehler oder Style-Inkonsistenzen ausgeliefert werden. Laufen diese ohne Warnung durch werden die Abhängigkeiten zwischen den JavaScript-Modulen aufgelöst und in einer Datei zusammengefasst.
 </section>
 
-<section data-markdown data-background="">
-### Vorverarbeitung
-
-grunt-contrib-jade
-
-grunt-contrib-handlebars
-
-grunt-preprocess
-
-grunt-cdn
+<section data-markdown>
+### RequireJS || Browserify
 </section>
 
-<section data-markdown data-background="">
-### Module
-
-grunt-contrib-requirejs
-
-grunt-browserify
+<section data-markdown>
+### Assets werden bei Änderungen neu kompliert bzw. optimiert
 </section>
 
-<section data-markdown data-background="">
-### Testing
+<section data-markdown>
+# Testing
 
+</section>
+<section data-markdown>
 grunt-karma
 
 grunt-protractor-runner
 
-grunt-githooks
-
 grunt-istanbul
 
 grunt-phantomjs
+
+grunt-dalek
+
+grunt-contrib-nodeunit
+
+grunt-mocha
+</section>
+
+<section data-markdown>
+
+# grunt-githooks
+![](/img/git.png)
+
+</section>
+
+<section data-markdown>
+```
+githooks: {
+	all: {
+		'pre-commit': 'jshint test:unit',
+		'post-merge': 'bower:install'
+	}
+}
+```
+</section>
+
+<section data-markdown>
+# Deployment
 </section>
 
 <section data-markdown data-background="">
-### Messen
-
-grunt-phantomas
-
-grunt-photobox
-</section>
-
-<section data-markdown data-background="">
-### Deployment
-
 grunt-ssh
 
 grunt-ftp
@@ -435,27 +542,57 @@ grunt-sftp
 
 grunt-gh-pages
 
+grunt-ssh-deploy
+
 grunt-shell
 
-grunt-jenkins
+(grunt-casper)
 </section>
 
 <section data-markdown data-background="">
-### Produktivität
+# Messen
+</section>
 
-grunt-contrib-connect
+<section data-markdown data-background="/img/phantomas.png" class="text-shadow light-font">
+# grunt-phantomas
+</section>
 
-grunt-contrib-livereload
+<section data-markdown data-background="/img/photobox.png" class="text-shadow light-font" data-background-size="900px">
+# grunt-photobox
+</section>
 
-grunt-devtools
+<section data-markdown>
+# Tipps
+</section>
 
-grunt-jira
+<section data-markdown data-background="/img/feopsconf.png" class="text-shadow">
+# Front End Ops Conf Videos
 
-grunt-casper
+Note:
+http://feopsconf.com
+</section>
+<section data-markdown data-background="/img/gruntintro.png" class="text-shadow">
+# Grunt Intro
+Note:
+http://24ways.org/2013/grunt-is-not-weird-and-hard/
+</section>
+<section data-markdown data-background="/img/gruntjs.com.png" class="text-shadow">
+# Grunt Deep Dive
+Note:
+http://gruntjs.com
+</section>
+<section data-markdown data-background="/img/gruntplugins.png"  class="text-shadow">
+# Grunt Plugins
+Note:
+http://gruntjs.com/plugins
+</section>
 
-grunt-bump
+<section data-markdown data-background="/img/thanks.gif" class="text-shadow">
+# Danke
+</section>
 
-grunt-git
+<section data-markdown data-background="/img/question.gif">
+# Fragen?
 </section>
 
 <!-- /// SLIDES: Fin /// -->

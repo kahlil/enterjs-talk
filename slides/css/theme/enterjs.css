@@ -170,3 +170,10 @@ body {
   .reveal .build-tools li {
     list-style-type: none;
     display: inline; }
+.reveal pre, .reveal code {
+  background-color: #494949;
+  color: #d6d6d6; }
+.reveal pre {
+  padding: 7px 10px; }
+.reveal code {
+  padding: .1em .3em; }
