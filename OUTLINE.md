@@ -27,7 +27,7 @@ Alex Sexton:
 >
 > I think things are about to shift, and I’d (humbly) like to help guide that shift, because I think it’ll be great for the Web.
  
-* Referenzartikel von Alex Sexton, sicher kann man sich um Details streiten der Artikel ist meines Erachtens aber sehr gut, ausführlich und erschöpfend
+Man kann sich um Details streiten der Artikel ist meines Erachtens aber sehr gut, ausführlich und erschöpfend
 
 
 #### 3 Wesentliche Punkte
@@ -136,7 +136,7 @@ FeOps ist ein riesiger Bereich und auch wenn es das jetzt als neue Disziplin gib
 Also müsst ihr herhalten und das könnt ihr und zwar sofort. 
 Ich bin mir sicher, dass ihr in eurem Team verargumentieren könnt, dass eine Person einmal die Woche oder in einem anderen Rhytmus einen Tag lang FeOps-Tätigkeiten übernehmen kann.
 
-Diese Person nimmt sich GruntJS zu Hand und kann sich damit in kurzer Zeit daran machen die größten Engpässe in Entwicklung/Deployment/Code-Qualität usw. zu entfernen.
+Diese Person nimmt sich GruntJS zu Hand und kann sich damit in kurzer Zeit daran machen die grössten Engpässe in Entwicklung/Deployment/Code-Qualität usw. zu entfernen.
 
 Ihr könnt prinzipiell sofort damit anfangen euer Leben und das eurer Mitarbeiter und Kunden zu verbessern. 
 
@@ -147,11 +147,11 @@ Ich gebe euch hier nun einen Rundumschlag über die vielen Möglichkeiten die ih
 * grunt-contrib-concat
 * grunt-contrib-uglify
 * grunt-contrib-sass
-* grunt-contrib-handlebars
 	**Code-Quali**
 * grunt-contrib-jshint
 * grunt-jscs-checker
 	**Präprozess**
+* grunt-contrib-handlebars
 * grunt-preprocess
 * grunt-cdn
 	**Modules**
@@ -161,11 +161,11 @@ Ich gebe euch hier nun einen Rundumschlag über die vielen Möglichkeiten die ih
 * grunt-karma
 * grunt-protractor-runner
 * grunt-githooks
-* grunt-contrib-handlebars
 * grunt-istanbul
 * grunt-phantomjs
 	**Messen**
 * grunt-phantomas
+* grunt-photobox
 	**Deployment**
 * grunt-ssh
 * grunt-ftp

@@ -1,19 +1,18 @@
-# Frontend Ops mit GruntJS
-
-Yeah
+# Frontend Ops & GruntJS
 
 
 
 # Slide 2
 
-Yeah
+[Yeah](http://google.com) what?!
 
 Note:
 These are some notes for this slide.
 Bla bla
 
 
-# Vertical SLIIIIDE
+
+# Horizontal SLIIIIDE
 
 
 

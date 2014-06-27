@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 					'css/theme/night.css': 'css/theme/source/night.scss',
 					'css/theme/serif.css': 'css/theme/source/serif.scss',
 					'css/theme/simple.css': 'css/theme/source/simple.scss',
+					'css/theme/enterjs.css': 'css/theme/source/enterjs.scss',
 					'css/theme/sky.css': 'css/theme/source/sky.scss',
 					'css/theme/moon.css': 'css/theme/source/moon.scss',
 					'css/theme/solarized.css': 'css/theme/source/solarized.scss',
@@ -96,6 +97,17 @@ module.exports = function(grunt) {
 			]
 		},
 
+		imagemin: {                          // Task
+	    dynamic: {                         // Another target
+	      files: [{
+	        expand: true,                  // Enable dynamic expansion
+	        cwd: 'img/',                   // Src matches are relative to this path
+	        src: ['*.{png,jpg,gif}'],   // Actual patterns to match
+	        dest: 'img/dist/'                  // Destination path prefix
+	      }]
+	    }
+	  },
+
 		watch: {
 			main: {
 				files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
@@ -117,6 +129,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
+	grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
 	grunt.loadNpmTasks( 'grunt-zip' );
 
 	// Default task
