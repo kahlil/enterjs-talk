@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/enterjs.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Octicons -->
+		<link rel="stylesheet" href="lib/css/octicons/octicons.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /// SLIDES /// -->
+
+<section data-markdown>
+# **Frontend Ops & GruntJS**
+</section>
+
+<section data-markdown>
+## **Kahlil Lechelt**
+</section>
+
+
+<section data-markdown data-background="#fff">
+![](/img/etecture.png)
+</section>
+
+<section data-markdown>
+## **KarlsruheJS** & **FrankfurtJS**
+
+Organisation
+</section>
+
+<section data-background="/img/agentlexie.jpg" data-background-size="1024px" data-markdown>
+</section>
+
+<section data-markdown>
+## **@distilledhype**
+
+auf Twitter, Github, npm
+
+distillehype.net
+</section>
+
+<section data-background="/img/future.gif" class="light-font text-shadow">
+
+<h2 class="fragment">1. Frontend Ops</h2>
+<h2 class="fragment">2. GruntJS</h2>
+<h2 class="fragment">3. FeOps mit GruntJS</h2>
+</section>
+
+
+<section data-markdown>
+	<script type="text/template">
+		## Was ist **Frontend Ops**?
+<p class="fragment">Wer kann sich darunter was vorstellen?</p>
+	</script>
+</section>
+
+<section data-markdown>
+# Was bisher geschah...
+</section>
+
+
+<section data-background="/img/01.png" data-markdown>
+</section>
+
+<section data-markdown>
+
+> With all due respect, **may I ask if you actually enjoy your job?** I am dev, [...]
+>
+> BUT **if you are a coder doing something else and *then* come back to all of *this* as well**, then wow, **I don't know how you haven't gone mad already**.
+>
+> I'd be sick to the stomach if I had to do all of this, in addition to my usual work."
+</section>
+
+<section data-background="/img/02.png">
+</section>
+
+
+<section data-markdown
+         data-background="/img/speed.gif"
+				 class="light-font text-shadow">
+
+# Maximale **Geschwindigkeit**
+
+</section>
+
+<section data-markdown
+				 data-background="/img/happy.gif"
+				 class="text-shadow">
+
+# **Glückliche Menschen**
+</section>
+
+<section data-markdown data-background="/img/question-2.gif" class="text-shadow">
+# **Fragen?**
+</section>
+
+<section data-markdown
+				 data-background="/img/robot2.gif"
+				 class="text-shadow">
+</section>
+
+
+
+<section data-markdown
+				 data-background="/img/console.png"
+				 data-background-size="680px"
+				 class="text-shadow">
+</section>
+
+
+<section class="text-shadow">
+<p style="text-align: center">
+	<img src="/img/grunt-logo.png" alt="" class="grunt">
+</p>
+</section>
+
+<section data-markdown data-background="/img/gruntvsgulp2.gif" class="text-shadow">
+	# **Grunt** vs **Gulp**
+</section>
+
+<section data-markdown data-background="/img/no1.gif" class="text-shadow">
+	# **Grunt** vs **Gulp**
+</section>
+
+<section data-background="/img/nodejs.org.png"></section>
+<section data-background="/img/node-npm.png" data-background-size="680px"></section>
+
+<section data-markdown
+				 data-background="">
+# grunt-cli
+
+```sh
+npm install -g grunt-cli
+```
+</section>
+
+<section data-background="/img/grunt-cli-v.png" data-background-size="680px"></section>
+
+<section data-markdown>
+# package.json
+```
+{
+  "name": "my-project-name",
+  "version": "0.1.0"
+}
+```
+</section>
+
+
+<section data-markdown>
+# Gruntfile.js
+```
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+    // Task Konfigurationen.
+  });
+
+  // Ein Plugin laden.
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+
+  // Den Default Task registrieren.
+  grunt.registerTask('default', ['uglify']);
+
+};
+```
+</section>
+
+
+<section data-markdown>
+# Grunt & Plugins
+```
+npm install grunt --save-dev
+npm install grunt-contrib-concat --save-dev
+npm install grunt-contrib-uglify --save-dev
+```
+</section>
+
+<section data-background="/img/usage-example.png"></section>
+
+
+<section data-markdown data-background="/img/anatomy.gif" class="text-shadow">
+## **Anatomie einer Task Konfiguration**
+</section>
+
+<section data-markdown>
+## Boilerplate
+```
+grunt.initConfig({
+	// ...
+});
+```
+</section>
+
+<section data-markdown>
+## Pluginname
+```
+grunt.initConfig({
+	concat: {
+		// ...
+	}
+});
+```
+</section>
+
+<section data-markdown>
+## Optionen
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		}
+		// ...
+	}
+});
+```
+</section>
+
+<section data-markdown>
+## Taskname
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		},
+		dist: {
+			// ...
+		}
+	}
+});
+```
+</section>
+
+<section data-markdown>
+## Input
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		},
+		dist: {
+			// Evtl. eine konfirgurationsspezifische options-Property
+			src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
+			// ...
+		}
+
+	}
+});
+```
+</section>
+
+<section data-markdown>
+## Output
+```
+grunt.initConfig({
+	concat: {
+		options: {
+			separator: ';'
+		},
+		dist: {
+			// Evtl. eine konfirgurationsspezifische options-Property
+			src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
+			dest: 'dist/built.js'
+		}
+
+	}
+});
+```
+</section>
+
+<section data-background="/img/concat.gif" data-background-size="802px">
+</section>
+
+
+
+<section data-markdown
+				 data-background="/img/power.gif" class="text-shadow light-font">
+# **Frontend Operations** mit **Grunt**
+</section>
+
+<section data-markdown data-background="">
+	`> grunt`
+</section>
+
+<section data-markdown class="text-shadow">
+
+![](/img/concat-compress.png)
+</section>
+
+
+<section data-markdown>
+![](/img/livereload.gif)
+</section>
+
+<section data-markdown data-background="/img/watch.png" class="text-shadow">
+## **grunt-contrib-watch**
+</section>
+
+<section data-markdown>
+
+# **JSHINT & JSCS**
+</section>
+
+<section data-markdown>
+## **RequireJS** || **Browserify**
+</section>
+
+<section data-markdown>
+# Testing
+
+</section>
+<section data-markdown class="bold">
+**grunt-karma**
+
+**grunt-protractor-runner**
+
+**grunt-istanbul**
+
+**grunt-phantomjs**
+
+**grunt-dalek**
+
+**grunt-contrib-nodeunit**
+
+**grunt-mocha**
+
+**grunt-tape**
+</section>
+
+<section data-markdown data-background="/img/photobox.png" class="text-shadow light-font" data-background-size="900px">
+# **grunt-photobox**
+</section>
+
+<section data-markdown>
+
+# grunt-**githooks**
+![](/img/git.png)
+
+</section>
+
+<section data-markdown>
+```
+githooks: {
+	all: {
+		'pre-commit': 'jshint test:unit',
+		'post-merge': 'bower:install'
+	}
+}
+```
+</section>
+
+
+<section data-markdown>
+# Deployment
+</section>
+
+<section data-markdown data-background="">
+**grunt-ssh**
+
+**grunt-ftp**
+
+**grunt-sftp**
+
+**grunt-gh-pages**
+
+**grunt-ssh-deploy**
+
+**grunt-shell**
+
+**(grunt-casper)**
+</section>
+
+
+<section data-markdown data-background="">
+# Messen
+</section>
+
+<section data-markdown data-background="/img/phantomas.png" class="text-shadow light-font">
+# grunt-**phantomas**
+</section>
+
+
+<section data-markdown>
+# Tipps
+</section>
+
+<section data-markdown data-background="/img/feopsconf.png" class="text-shadow">
+# **Front End Ops Conf Videos**
+</section>
+<section data-markdown data-background="/img/gruntintro.png" class="text-shadow">
+# **Grunt Intro**
+</section>
+<section data-markdown data-background="/img/gruntjs.com.png" class="text-shadow">
+# **Grunt Deep Dive**
+</section>
+<section data-markdown data-background="/img/gruntplugins.png"  class="text-shadow">
+# **Grunt Plugins**
+</section>
+
+<section data-markdown data-background="/img/thanks.gif" class="text-shadow">
+# **Danke!**
+</section>
+
+<section data-markdown data-background="/img/question.gif" class="text-shadow">
+# **Fragen?**
+</section>
+
+<!-- /// SLIDES: Fin /// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- External content
+				<section data-markdown="content/slides.md"
+				         data-separator="^\n\n\n"
+								 data-vertical="^\n\n"
+				         data-notes="^Note:">
+				</section>
+				-->
+
+				<!--  Markdown:
+					<section data-markdown>
+				    <script type="text/template">
+			        ## Page title
+
+			        A paragraph with some text and a [link](http://hakim.se).
+				    </script>
+					</section>
+				-->
+
+				<!-- Background Image:
+
+					<section data-background="http://example.com/image.png">
+				  	<h2>This slide will have a full-size background image.</h2>
+					</section>
+
+					<section data-background="http://example.com/image.png"
+					         data-background-size="100px"
+									 data-background-repeat="repeat">
+
+						<h2>This background image will be sized to 100px and repeated.</h2>
+					</section>
+
+				-->
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				width: 1024,
+				backgroundTransition: 'slide', // default/none/slide/concave/convex/zoom
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
