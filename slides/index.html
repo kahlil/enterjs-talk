@@ -64,39 +64,56 @@
 <!-- /// SLIDES /// -->
 
 <section data-markdown>
-# Frontend Ops & GruntJS
+# **Frontend Ops & GruntJS**
 </section>
 
 <section data-markdown>
-<script type="text/template">
-# Kahlil Lechelt
-#### @distilledhype
-
-<p class="fragment">Software Developer bei ETECTURE</p>
-
-<p class="fragment">KarlsruheJS & FrankfurtJS Org</p>
-</script>
+## **Kahlil Lechelt**
 </section>
+
+
+<section data-markdown data-background="#fff">
+![](/img/etecture.png)
+</section>
+
+<section data-markdown>
+## **KarlsruheJS** & **FrankfurtJS**
+
+Organisation
+</section>
+
+<section data-background="/img/agentlexie.jpg" data-background-size="1024px" data-markdown>
+</section>
+
+<section data-markdown>
+## **@distilledhype**
+
+auf Twitter, Github, npm
+
+distillehype.net
+</section>
+
+<section data-background="/img/future.gif" class="light-font text-shadow">
+
+<h2 class="fragment">1. Frontend Ops</h2>
+<h2 class="fragment">2. GruntJS</h2>
+<h2 class="fragment">3. FeOps mit GruntJS</h2>
+</section>
+
 
 <section data-markdown>
 	<script type="text/template">
-		# Frontend Ops
+		## Was ist **Frontend Ops**?
 <p class="fragment">Wer kann sich darunter was vorstellen?</p>
 	</script>
 </section>
 
 <section data-markdown>
-# Die Geschichte
-
-Note:
-
+# Was bisher geschah...
 </section>
 
 
 <section data-background="/img/01.png" data-markdown>
-Note:
-Alex Sexton publizierte am 26.03.2013 diesen Artikel über das Deployment von JavaScript Applikationen.
-In diesem Artikel beschreibt er ausführlich wie er mit Grunt viele Prozesse automatisiert um Code-Qualität uns Performance auf allen Seiten ständig zu gewährleisten. Daraufhin erhielt er folgenden Kommentar:
 </section>
 
 <section data-markdown>
@@ -106,20 +123,9 @@ In diesem Artikel beschreibt er ausführlich wie er mit Grunt viele Prozesse aut
 > BUT **if you are a coder doing something else and *then* come back to all of *this* as well**, then wow, **I don't know how you haven't gone mad already**.
 >
 > I'd be sick to the stomach if I had to do all of this, in addition to my usual work."
-
-Note:
-Diesen Kommentar nahm sich Alex zum Anlass um die Tätigkeiten die er beschrieben hat noch besser und als eine eigene Disziplin zusammen zu fassen.
 </section>
 
 <section data-background="/img/02.png">
-	<aside class="notes">
-Diese Disziplin hat er dann in einem Smashing Magazine Artikel im Juni 2013
-Front-End Operations getauft. Man kann sich sicher um Details noch streiten dieser Artikel ist aber sehr gut, ausführlich und erschöpfend und ausführlich
-und dient mir hier für meine Vorstellung von Frontend Ops als Referenz.
-
-Was ist Frontend Ops also? Ein Frontend Operations Engineer hat eine Hauptaufgabe:
-
-	</aside>
 </section>
 
 
@@ -127,18 +133,7 @@ Was ist Frontend Ops also? Ein Frontend Operations Engineer hat eine Hauptaufgab
          data-background="/img/speed.gif"
 				 class="light-font text-shadow">
 
-# Maximale Geschwindigkeit
-
-Note:
-Das erreichen der maximalen Geschwindigkeit.
-Geschwindigkeit der Applikation ist klar, ist aber nur ein kleiner Teilbereich den
-es zu optimieren gilt. Hier geht es auch um die Entwicklungsgeschwindigkeit also:
-* wie finden sich die Entwickler am schnellsten im Code zurecht?
-* wie schnell kann ich neue Entwickler in das Projekt einführen?
-* wie schnell bekomme ich meinen neuen Code direkt im Browser zu sehen?
-* und wie schnell von dort auf die Stgingumgebung und von dort in die Produktion
-
-Und warum muss ein Frontend Ops Engineer das machen?
+# Maximale **Geschwindigkeit**
 
 </section>
 
@@ -146,42 +141,16 @@ Und warum muss ein Frontend Ops Engineer das machen?
 				 data-background="/img/happy.gif"
 				 class="text-shadow">
 
-# Glückliche Menschen
-
-Note:
-Natürlich glückliche Menschen zu erzeugen!
-Entwickler mit gut organisiertem Code & optimal automatisierten Deployments sind
-potentiell viel glücklicher und produktiver.
-Schnelle Deployments machen Projektleiter und QA Happy weil neue Features, Teilfunktionalität,
-und Bugfixes schnell zu sehen sind bzw. schnell getestet werden können.
-
-Und der Benutzer freut sich über eine Applikation schnell und gut gewartet ist.
-
-Um die maximale Gechwindigkeit zu erreichen brauchen wir die Hilfe unseres besten
-Freundes:
+# **Glückliche Menschen**
 </section>
 
-
-<section data-markdown
-				 data-background="/img/robot1.gif"
-				 class="text-shadow">
-
-# Roboter
-
-Note:
-Dem Roboter. Äh. Moment das ist nicht der richtige.
+<section data-markdown data-background="/img/question-2.gif" class="text-shadow">
+# **Fragen?**
 </section>
-
-
 
 <section data-markdown
 				 data-background="/img/robot2.gif"
 				 class="text-shadow">
-
-# Roboter
-
-Note:
-Ah, ups auch noch nicht, so weit sind wir noch nicht.
 </section>
 
 
@@ -190,54 +159,22 @@ Ah, ups auch noch nicht, so weit sind wir noch nicht.
 				 data-background="/img/console.png"
 				 data-background-size="680px"
 				 class="text-shadow">
-
-
-Note:
-Ah, besser.
 </section>
 
 
 <section class="text-shadow">
-
-<ul class="build-tools">
-	<li class="fragment fade-in">
-		<span class="fragment fade-out">
-			<img src="/img/gulp.png" alt="">
-		</span>
-	</li>
-	<li><img src="/img/grunt-logo.png" alt="" class="grunt"></li>
-	<li class="fragment fade-in">
-		<span class="fragment fade-out">
-			<img src="/img/fez.png" alt="">
-		</span>
-	</li>
-</ul>
-
-<aside class="notes">
-
-Also ein unheimlich großer Teil von dieser Aufgaben ist Automatisierung.
-Und Alex' Waffe seiner Wahl um zu Automatisieren ist GruntJS
-
-Nun gibt es mittlerweile ja noch einige JavaScript Build Tools mehr als nur GruntJS.
-
--- zeige Gulp Logo --
-Eines davon ist GulpJS und setzt auf Code statt Konfiguration, dass bedeutet Build-Abläufe werden als JavaScript Code geschrieben. Darüber hinaus hat es momentan noch gegenüber Grunt einen Performance-Vorteil, der aber im Zuge von architektonischen Änderungen bei Grunt verlorgen gehen wird.
-
--- zeige Fez Logo --
-Fez ist ein weiteres JavaScript Build Tool. Soweit ich weiss ist es noch jünger als Gulp, ich habe bisher aber noch keinen Bedarf gehabt noch ein weiteres Tool zu lernen und kann hier nur sagen, dass es von sich behauptet auch sehr schnell zu sein.
-
--- zeige nur Grunt Logo --
-Grunt ist für Frontend Ops Tätigkeiten auch weiterhin das Tool meiner Wahl, aufgrund
-des riesigen Arsenals an Plugins und dem Fakt dass die Task-Konfiguration über ein JSON-Objekt
-funktioniert, dies erleichtert es den Umgang mit Grunt für Nicht-JavaScript-Coder, ist also sehr Team-freundlich.
-
--- Wer arbeitet heute schon jeden Tag oder fast jeden Tag mit Grunt oder etwas ähnlichem?
--- Wer ist damit noch gar nicht in Berührung gekommen?
-
-</aside>
+<p style="text-align: center">
+	<img src="/img/grunt-logo.png" alt="" class="grunt">
+</p>
 </section>
 
+<section data-markdown data-background="/img/gruntvsgulp2.gif" class="text-shadow">
+	# **Grunt** vs **Gulp**
+</section>
 
+<section data-markdown data-background="/img/no1.gif" class="text-shadow">
+	# **Grunt** vs **Gulp**
+</section>
 
 <section data-background="/img/nodejs.org.png"></section>
 <section data-background="/img/node-npm.png" data-background-size="680px"></section>
@@ -249,9 +186,6 @@ funktioniert, dies erleichtert es den Umgang mit Grunt für Nicht-JavaScript-Cod
 ```sh
 npm install -g grunt-cli
 ```
-
-Note:
-
 </section>
 
 <section data-background="/img/grunt-cli-v.png" data-background-size="680px"></section>
@@ -300,7 +234,7 @@ npm install grunt-contrib-uglify --save-dev
 
 
 <section data-markdown data-background="/img/anatomy.gif" class="text-shadow">
-## Anatomie einer Task Konfiguration
+## **Anatomie einer Task Konfiguration**
 </section>
 
 <section data-markdown>
@@ -313,7 +247,7 @@ grunt.initConfig({
 </section>
 
 <section data-markdown>
-## Taskname
+## Pluginname
 ```
 grunt.initConfig({
 	concat: {
@@ -321,9 +255,6 @@ grunt.initConfig({
 	}
 });
 ```
-
-Note:
-Der Taskname wird durch das Plugin vorgegeben.
 </section>
 
 <section data-markdown>
@@ -338,13 +269,10 @@ grunt.initConfig({
 	}
 });
 ```
-
-Note:
-Der Taskname wird durch das Plugin vorgegeben.
 </section>
 
 <section data-markdown>
-## Konfigruationsname
+## Taskname
 ```
 grunt.initConfig({
 	concat: {
@@ -357,9 +285,6 @@ grunt.initConfig({
 	}
 });
 ```
-
-Note:
-Dieser Name kann frei gewählt werden.
 </section>
 
 <section data-markdown>
@@ -406,114 +331,66 @@ grunt.initConfig({
 
 
 <section data-markdown
-				 data-background="/img/power.gif" class="text-shadow">
-
-# Frontend Operations mit Grunt
-
-Note:
-
-Grunt kann vor allem dazu eingesetzt werden den Entwicklungsfluss zu beschleunigen, Code Qualität zu garantieren und Deployments zu vereinfachen.
-
-Ich stelle euch jetzt mal vor wie so ein optimierter Entwcklungsfluss aussehen kann und hoffe dass mindestens ein paar Punkte mitnehmt, die ihr heute direkt anwenden könnt.
-
-Frontend Operations ist das perfekte Thema um die Bandbreite an Möglichkeiten zu zeigen
-
-FeOps ist ein riesiger Bereich und auch wenn es das jetzt als neue Disziplin gibt, wird die Firma bei der ihr jetzt arbeitet wahrscheinlich nicht hergehen und eine Person anstellen die das Vollzeit macht. Trotzdem sind diese Punkte aber für fast jedes mittelgroße bis große Webprojekt essentiell um das bestmögliche Ergebnis möglichst effizient zu erreichen.
-
-Also müsst ihr herhalten und das könnt ihr und zwar sofort.
-Ich bin mir sicher, dass ihr in eurem Team verargumentieren könnt, dass eine Person einmal die Woche oder in einem anderen Rhytmus einen Tag lang FeOps-Tätigkeiten übernehmen kann.
-
-Diese Person nimmt sich GruntJS zu Hand und kann sich damit in kurzer Zeit daran machen die grössten Engpässe in Entwicklung/Deployment/Code-Qualität usw. zu entfernen.
-
-Ihr könnt prinzipiell sofort damit anfangen euer Leben und das eurer Mitarbeiter und Kunden zu verbessern.
-
-Ich gebe euch hier nun einen Rundumschlag über die vielen Möglichkeiten die ihr allein mit Grunt habt.
-
+				 data-background="/img/power.gif" class="text-shadow light-font">
+# **Frontend Operations** mit **Grunt**
 </section>
 
 <section data-markdown data-background="">
 	`> grunt`
-
-	Note:
-
-	Ihr setzt euch an euren Arbeitsplatz. Terminal auf, wechselt in euer Directory und gebt `grunt` ein.
 </section>
 
 <section data-markdown class="text-shadow">
 
 ![](/img/concat-compress.png)
-
-Note:
-Als erstes starten die Präprozessoren.
-HTML Snippets oder JADE Templates werden zu HTML-Seiten kompiliert.
-Sass wird zu CSS kompiliert und
-JavaScript Module werden zu einer Datei zusammengefasst.
-Bilder werden einmal optimiert.
-
-grunt-contrib-sass oder *-less
-grunt-contrib-jade
-grunt-contrib-imagemin
-grunt-contrib-handlebars
 </section>
 
 
 <section data-markdown>
 ![](/img/livereload.gif)
-
-
-Note:
-Die kompilierten Dateien landen dann in einem Distributionsordner aus dem die optimierten Assets an den Entwicklungsserver ausgeliefert werden
-Als nächstes startet Grunt mit
-grunt-contrib-connect mit grunt-contrib-livereload
-einen Developmentserver der geänderte Dateien selbständig neu lädt.
-
-d.h. wenn man Änderungen vornimmt, die Dateien neu kompiliert werden und dann im Distributionsordner landen wird das von Livereload erkannt und die geänderten Assets werden automatisch neu geladen.
 </section>
 
 <section data-markdown data-background="/img/watch.png" class="text-shadow">
-## grunt-contrib-watch
+## **grunt-contrib-watch**
 </section>
 
 <section data-markdown>
 
-# JSHINT & JSCS
-
-Note:
-
-Im JavaScript schalten sich, über den Watch-Task konfiguriert, ein JSHint-Checker und ein JS Style Checker dazwischen um sicher zu gehen, dass keine groben JavaScriptfehler oder Style-Inkonsistenzen ausgeliefert werden. Laufen diese ohne Warnung durch werden die Abhängigkeiten zwischen den JavaScript-Modulen aufgelöst und in einer Datei zusammengefasst.
+# **JSHINT & JSCS**
 </section>
 
 <section data-markdown>
-### RequireJS || Browserify
-</section>
-
-<section data-markdown>
-### Assets werden bei Änderungen neu kompliert bzw. optimiert
+## **RequireJS** || **Browserify**
 </section>
 
 <section data-markdown>
 # Testing
 
 </section>
-<section data-markdown>
-grunt-karma
+<section data-markdown class="bold">
+**grunt-karma**
 
-grunt-protractor-runner
+**grunt-protractor-runner**
 
-grunt-istanbul
+**grunt-istanbul**
 
-grunt-phantomjs
+**grunt-phantomjs**
 
-grunt-dalek
+**grunt-dalek**
 
-grunt-contrib-nodeunit
+**grunt-contrib-nodeunit**
 
-grunt-mocha
+**grunt-mocha**
+
+**grunt-tape**
+</section>
+
+<section data-markdown data-background="/img/photobox.png" class="text-shadow light-font" data-background-size="900px">
+# **grunt-photobox**
 </section>
 
 <section data-markdown>
 
-# grunt-githooks
+# grunt-**githooks**
 ![](/img/git.png)
 
 </section>
@@ -529,70 +406,60 @@ githooks: {
 ```
 </section>
 
+
 <section data-markdown>
 # Deployment
 </section>
 
 <section data-markdown data-background="">
-grunt-ssh
+**grunt-ssh**
 
-grunt-ftp
+**grunt-ftp**
 
-grunt-sftp
+**grunt-sftp**
 
-grunt-gh-pages
+**grunt-gh-pages**
 
-grunt-ssh-deploy
+**grunt-ssh-deploy**
 
-grunt-shell
+**grunt-shell**
 
-(grunt-casper)
+**(grunt-casper)**
 </section>
+
 
 <section data-markdown data-background="">
 # Messen
 </section>
 
 <section data-markdown data-background="/img/phantomas.png" class="text-shadow light-font">
-# grunt-phantomas
+# grunt-**phantomas**
 </section>
 
-<section data-markdown data-background="/img/photobox.png" class="text-shadow light-font" data-background-size="900px">
-# grunt-photobox
-</section>
 
 <section data-markdown>
 # Tipps
 </section>
 
 <section data-markdown data-background="/img/feopsconf.png" class="text-shadow">
-# Front End Ops Conf Videos
-
-Note:
-http://feopsconf.com
+# **Front End Ops Conf Videos**
 </section>
 <section data-markdown data-background="/img/gruntintro.png" class="text-shadow">
-# Grunt Intro
-Note:
-http://24ways.org/2013/grunt-is-not-weird-and-hard/
+# **Grunt Intro**
 </section>
 <section data-markdown data-background="/img/gruntjs.com.png" class="text-shadow">
-# Grunt Deep Dive
-Note:
-http://gruntjs.com
+# **Grunt Deep Dive**
 </section>
 <section data-markdown data-background="/img/gruntplugins.png"  class="text-shadow">
-# Grunt Plugins
-Note:
-http://gruntjs.com/plugins
+# **Grunt Plugins**
 </section>
 
 <section data-markdown data-background="/img/thanks.gif" class="text-shadow">
-# Danke
+# **Danke!**
 </section>
 
-<section data-markdown data-background="/img/question.gif">
-# Fragen?
+<section data-markdown data-background="/img/question.gif" class="text-shadow">
+# **Fragen?**
 </section>
 
 <!-- /// SLIDES: Fin /// -->

@@ -21,7 +21,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 
 // Override theme settings (see ../template/settings.scss)
-$headingFont: 'Raleway', Impact, sans-serif;
+$headingFont: 'Source Sans Pro', Impact, sans-serif;
 $headingColor: #3E6FA2;
 
 $mainFont: 'Source Sans Pro', sans-serif;
@@ -31,7 +31,7 @@ $mainFontSize: 38px;
 $linkColor: #3E6FA2;
 
 $headingTextShadow: none;
-$headingTextTransform: uppercase;
+$headingTextTransform: none;
 $headingLineHeight: 1.5em;
 $headingLetterSpacing: 0.02em;
 $backgroundColor: #bcbcbc;
@@ -47,13 +47,17 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 // Overwrite Settings
 .reveal {
+  * {
+    text-align: left;
+  }
+
   section img {
     border: none;
     background: none;
     box-shadow: none;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 900;
+    font-weight: 300;
     font-style: italic;
   }
 
@@ -70,6 +74,11 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     height: 3px;
   }
 
+  blockquote {
+    background: none;
+    box-shadow: none;
+  }
+
   blockquote p {
     font-weight: 300;
     text-align: left;
@@ -77,7 +86,6 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
   .light-font {
     h1, h2, h3, h4, h5, h6 {
-      font-family: "Raleway";
       color: #fff;
       font-style: italic;
     }
@@ -109,5 +117,9 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
   }
   code {
     padding: .1em .3em;
+  }
+
+  .bold p {
+    font-weight: 600;
   }
 }

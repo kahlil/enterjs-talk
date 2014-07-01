@@ -39,10 +39,10 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #3e6fa2;
-  font-family: "Raleway", Impact, sans-serif;
+  font-family: "Source Sans Pro", Impact, sans-serif;
   line-height: 1.5em;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
+  text-transform: none;
   text-shadow: none; }
 
 .reveal h1 {
@@ -139,12 +139,14 @@ body {
 .reveal .slide-number {
   color: #3e6fa2; }
 
+.reveal * {
+  text-align: left; }
 .reveal section img {
   border: none;
   background: none;
   box-shadow: none; }
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-weight: 900;
+  font-weight: 300;
   font-style: italic; }
 .reveal h1 {
   font-size: 2.65em; }
@@ -153,11 +155,13 @@ body {
   font-weight: 300; }
 .reveal .progress {
   height: 3px; }
+.reveal blockquote {
+  background: none;
+  box-shadow: none; }
 .reveal blockquote p {
   font-weight: 300;
   text-align: left; }
 .reveal .light-font h1, .reveal .light-font h2, .reveal .light-font h3, .reveal .light-font h4, .reveal .light-font h5, .reveal .light-font h6 {
-  font-family: "Raleway";
   color: #fff;
   font-style: italic; }
 .reveal .text-shadow h1, .reveal .text-shadow h2, .reveal .text-shadow h3, .reveal .text-shadow h4, .reveal .text-shadow h5, .reveal .text-shadow h6 {
@@ -177,3 +181,5 @@ body {
   padding: 7px 10px; }
 .reveal code {
   padding: .1em .3em; }
+.reveal .bold p {
+  font-weight: 600; }
