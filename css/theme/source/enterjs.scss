@@ -28,7 +28,7 @@ $mainFont: 'Source Sans Pro', sans-serif;
 $mainColor: #414C58;
 $mainFontSize: 38px;
 
-$linkColor: #3E6FA2;
+$linkColor: #fff;
 
 $headingTextShadow: none;
 $headingTextTransform: none;
@@ -63,6 +63,11 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
   h1 {
     font-size: 2.65em;
+  }
+
+  a {
+    background-color: #3E6FA2;
+    padding: 0 5px;
   }
 
   p, li {
