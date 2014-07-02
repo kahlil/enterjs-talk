@@ -120,7 +120,7 @@ module.exports = function(grunt) {
 		},
 
 		'gh-pages': {
-	    src: ['**', '!node_modules', '!.sass-cache']
+	    src: ['**', '!ARTICLE.md']
 	  }
 
 	});
