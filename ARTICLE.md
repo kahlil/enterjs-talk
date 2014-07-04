@@ -1,10 +1,10 @@
 # Fronend Ops & GruntJS
 
-On the 1st of July I held this talk at the German Enterprise JavaScript conference
+On the 1st of July 2014 I gave this talk at the German Enterprise JavaScript conference
 EnterJS in Cologne, Germany.
 
 The talk was targeted towards developers who don't use GruntJS or a similar tool extensively yet,
-with the goal to make them realize that they probably should.
+with the goal to make them realize how extensively it can be used to automate processes in front-end development.
 
 This article is that talk slightly adjusted for this format, in order to make the content available to
 everybody who is interested since the talk was not recorded.
@@ -54,4 +54,4 @@ Once all those issues are settled you can grab a JavaScript Task Runner like Gru
 things like asset optimization, enforcement of coding best-practices and deployments depeding on
 your conventions and priorities.
 
-If you achieve max speed and optimization on all the important bottlenecks and 
+If you achieve max speed and optimization on all the important bottlenecks and
